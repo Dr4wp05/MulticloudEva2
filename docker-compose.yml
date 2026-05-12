@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  erp-database:
+    build: ./database
+    container_name: erp-database
+    ports:
+      - "5432:5432"
+    volumes:
+      - [cite_start]./database/init.sql:/docker-entrypoint-initdb.d/init.sql # Automatiza la creación de tablas 
+    networks:
+      - azul-net
+
+  erp-frontend:
+    build: ./frontend
+    container_name: erp-frontend
+    ports:
+      - [cite_start]"80:3000" # Exposición al puerto 80 según el requerimiento [cite: 58]
+    environment:
+      - [cite_start]DB_HOST=${DB_IP_PRIVADA} # Variable que conectarás a la otra EC2 
+    networks:
+      - azul-net
+
+networks:
+  azul-net:
+    [cite_start]driver: bridge # Red interna para la comunicación de microservicios [cite: 27, 46, 64]
