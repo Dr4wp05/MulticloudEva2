@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ERP Cruz Azul - Ingreso de Productos</title>
+  <link rel="stylesheet" href="/css/estilos.css">
+</head>
+<body>
+  <h1>ERP Cruz Azul</h1>
+  <form id="form-producto">
+    <label>Nombre:<input type="text" name="nombre" required></label><br>
+    <label>Descripción:<input type="text" name="descripcion"></label><br>
+    <label>Precio:<input type="number" name="precio" required step="0.01"></label><br>
+    <button type="submit">Agregar Producto</button>
+  </form>
+  <div id="mensaje"></div>
+  <a href="/productos">Ver productos</a>
+  <script src="/js/index.js"></script>
+</body>
+</html>

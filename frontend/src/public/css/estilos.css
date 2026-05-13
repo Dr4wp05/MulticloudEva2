@@ -1,0 +1,28 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 2em;
+  background: #f4f8fb;
+}
+h1 {
+  color: #0074c2;
+}
+form, table {
+  margin-bottom: 1.5em;
+}
+input, button {
+  padding: 0.5em;
+  margin: 0.2em 0;
+}
+table {
+  background: #fff;
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 0.5em 1em;
+  border: 1px solid #ccc;
+}
+#mensaje {
+  color: green;
+  margin-bottom: 1em;
+}
